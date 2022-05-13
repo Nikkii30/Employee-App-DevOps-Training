@@ -36,7 +36,7 @@ pipeline {
 
         stage('Publish to Nexus') {
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'employees-app', classifier: '', file: 'target/employees-app-1.0.${BUILD_NUMBER}.war', type: 'war']], credentialsId: 'nexus', groupId: 'com.example.employees', nexusUrl: 'http://localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'war_files', version: '1.0.${BUILD_NUMBER}'
+                nexusArtifactUploader artifacts: [[artifactId: 'employees-app', classifier: '', file: 'target/employees-app-1.0.${BUILD_NUMBER}.war', type: 'war']], credentialsId: 'nexus', groupId: 'com.example.employees', nexusUrl: '//localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'war_files', version: '1.0.${BUILD_NUMBER}'
             }
         }
     }
