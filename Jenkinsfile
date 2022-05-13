@@ -30,7 +30,7 @@ pipeline {
 
         stage('Code Build') {
             steps {
-                sh "/opt/homebrew/bin/mvn clean package"
+                sh "/usr/local/bin/mvn clean package"
             }
         }
 
